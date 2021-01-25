@@ -46,10 +46,6 @@ class Solution:
                     return [n, j]
         return []
 
-
-
-
-# class testMe:
 def inc(x):
     return x + 1
 
