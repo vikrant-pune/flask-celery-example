@@ -39,16 +39,12 @@ import pytest
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
-        ans = []
-        index_out = 0
-        index_in = 0
-        # loop
         for n in range(0, len(nums)):
             for j in range(n+1, len(nums)):
                 # index_in = index_out + 1
                 if nums[n] + nums[j]  == target:
                     return [n, j]
-        return ans
+        return []
 
 
 
