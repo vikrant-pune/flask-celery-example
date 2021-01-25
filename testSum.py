@@ -40,9 +40,14 @@ class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
 
         ans = []
+        index_out = 0
+        index_in = 0
         # loop
-        for n in nums:
-            n = n+1
+        for n in range(0, len(nums)):
+            for j in range(n+1, len(nums)):
+                # index_in = index_out + 1
+                if nums[n] + nums[j]  == target:
+                    return [n, j]
         return ans
 
 
@@ -63,6 +68,33 @@ def test_twoSum2():
     s = Solution()
     with pytest.raises(TypeError):
         s.twoSum(nums=2, target= 9)
+
+
+
+def test_twoSum3():
+    s = Solution()
+
+    assert s.twoSum(nums=[3, 2, 4], target= 6) == [1, 2]
+
+#[3,3], target = 6
+# Output: [0,1]
+
+
+
+def test_twoSum4():
+    s = Solution()
+
+    assert s.twoSum(nums=[3, 3], target= 6) == [0, 1]
+
+
+def test_twoSum5():
+    s = Solution()
+    assert s.twoSum(nums=[3, 3], target= 7) == []
+
+def test_twoSum6():
+    s = Solution()
+    assert s.twoSum(nums=[3, 2, 3], target= 6) == [0,2]
+
 
 #
 # if __name__ == '__main__':
