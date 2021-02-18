@@ -8,6 +8,7 @@ The application provides two examples of background tasks using Celery:
 - Example 1 sends emails asynchronously.
 - Version 1 
 - Example 2 launches one or more asynchronous jobs and shows progress updates in the web page.
+- version 2
 
 Here is a screenshot of this application:
 
